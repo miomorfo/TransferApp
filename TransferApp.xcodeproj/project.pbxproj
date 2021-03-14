@@ -15,6 +15,13 @@
 		ED633C4325FE8D9D00834EBA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED633C4125FE8D9D00834EBA /* LaunchScreen.storyboard */; };
 		ED633C4E25FE8D9D00834EBA /* TransferAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED633C4D25FE8D9D00834EBA /* TransferAppTests.swift */; };
 		ED633C5925FE8D9D00834EBA /* TransferAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED633C5825FE8D9D00834EBA /* TransferAppUITests.swift */; };
+		ED633C6D25FE8FC600834EBA /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED633C6C25FE8FC600834EBA /* Request.swift */; };
+		ED633C7225FE916600834EBA /* TransferService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED633C7125FE916600834EBA /* TransferService.swift */; };
+		ED633C7725FE919E00834EBA /* TransferClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED633C7625FE919E00834EBA /* TransferClient.swift */; };
+		ED633C7C25FE921500834EBA /* ClientResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED633C7B25FE921500834EBA /* ClientResponse.swift */; };
+		ED633C8425FE936800834EBA /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED633C8325FE936800834EBA /* Response.swift */; };
+		ED633C8D25FE946100834EBA /* TransferServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED633C8C25FE946100834EBA /* TransferServiceTest.swift */; };
+		ED633C9525FE97E600834EBA /* TransferClientStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED633C9425FE97E600834EBA /* TransferClientStub.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +56,13 @@
 		ED633C5425FE8D9D00834EBA /* TransferAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TransferAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED633C5825FE8D9D00834EBA /* TransferAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferAppUITests.swift; sourceTree = "<group>"; };
 		ED633C5A25FE8D9D00834EBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED633C6C25FE8FC600834EBA /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		ED633C7125FE916600834EBA /* TransferService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferService.swift; sourceTree = "<group>"; };
+		ED633C7625FE919E00834EBA /* TransferClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferClient.swift; sourceTree = "<group>"; };
+		ED633C7B25FE921500834EBA /* ClientResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientResponse.swift; sourceTree = "<group>"; };
+		ED633C8325FE936800834EBA /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		ED633C8C25FE946100834EBA /* TransferServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferServiceTest.swift; sourceTree = "<group>"; };
+		ED633C9425FE97E600834EBA /* TransferClientStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferClientStub.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +113,16 @@
 		ED633C3525FE8D9A00834EBA /* TransferApp */ = {
 			isa = PBXGroup;
 			children = (
-				ED633C3625FE8D9A00834EBA /* AppDelegate.swift */,
-				ED633C3825FE8D9A00834EBA /* SceneDelegate.swift */,
-				ED633C3A25FE8D9A00834EBA /* ViewController.swift */,
-				ED633C3C25FE8D9A00834EBA /* Main.storyboard */,
-				ED633C3F25FE8D9D00834EBA /* Assets.xcassets */,
-				ED633C4125FE8D9D00834EBA /* LaunchScreen.storyboard */,
+				ED633C8B25FE940C00834EBA /* Controllers */,
+				ED633C8A25FE93FC00834EBA /* Core */,
+				ED633C8925FE93EB00834EBA /* Views */,
+				ED633C8825FE93DA00834EBA /* resources */,
 				ED633C4425FE8D9D00834EBA /* Info.plist */,
+				ED633C6C25FE8FC600834EBA /* Request.swift */,
+				ED633C7125FE916600834EBA /* TransferService.swift */,
+				ED633C7625FE919E00834EBA /* TransferClient.swift */,
+				ED633C7B25FE921500834EBA /* ClientResponse.swift */,
+				ED633C8325FE936800834EBA /* Response.swift */,
 			);
 			path = TransferApp;
 			sourceTree = "<group>";
@@ -115,6 +132,8 @@
 			children = (
 				ED633C4D25FE8D9D00834EBA /* TransferAppTests.swift */,
 				ED633C4F25FE8D9D00834EBA /* Info.plist */,
+				ED633C8C25FE946100834EBA /* TransferServiceTest.swift */,
+				ED633C9425FE97E600834EBA /* TransferClientStub.swift */,
 			);
 			path = TransferAppTests;
 			sourceTree = "<group>";
@@ -126,6 +145,40 @@
 				ED633C5A25FE8D9D00834EBA /* Info.plist */,
 			);
 			path = TransferAppUITests;
+			sourceTree = "<group>";
+		};
+		ED633C8825FE93DA00834EBA /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				ED633C3F25FE8D9D00834EBA /* Assets.xcassets */,
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
+		ED633C8925FE93EB00834EBA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				ED633C3C25FE8D9A00834EBA /* Main.storyboard */,
+				ED633C4125FE8D9D00834EBA /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		ED633C8A25FE93FC00834EBA /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				ED633C3625FE8D9A00834EBA /* AppDelegate.swift */,
+				ED633C3825FE8D9A00834EBA /* SceneDelegate.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		ED633C8B25FE940C00834EBA /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				ED633C3A25FE8D9A00834EBA /* ViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,7 +311,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED633C8425FE936800834EBA /* Response.swift in Sources */,
+				ED633C7225FE916600834EBA /* TransferService.swift in Sources */,
+				ED633C7C25FE921500834EBA /* ClientResponse.swift in Sources */,
+				ED633C7725FE919E00834EBA /* TransferClient.swift in Sources */,
 				ED633C3B25FE8D9A00834EBA /* ViewController.swift in Sources */,
+				ED633C6D25FE8FC600834EBA /* Request.swift in Sources */,
 				ED633C3725FE8D9A00834EBA /* AppDelegate.swift in Sources */,
 				ED633C3925FE8D9A00834EBA /* SceneDelegate.swift in Sources */,
 			);
@@ -268,6 +326,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED633C9525FE97E600834EBA /* TransferClientStub.swift in Sources */,
+				ED633C8D25FE946100834EBA /* TransferServiceTest.swift in Sources */,
 				ED633C4E25FE8D9D00834EBA /* TransferAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -446,7 +506,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.copycat.TransferApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -465,7 +525,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.copycat.TransferApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
